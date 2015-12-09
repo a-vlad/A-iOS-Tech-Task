@@ -15,6 +15,24 @@
 		F50159301C18277C00A40945 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F501592E1C18277C00A40945 /* LaunchScreen.storyboard */; };
 		F501593B1C18277C00A40945 /* ATaskTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F501593A1C18277C00A40945 /* ATaskTests.m */; };
 		F50159461C18277C00A40945 /* ATaskUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F50159451C18277C00A40945 /* ATaskUITests.m */; };
+		F50159571C182F9C00A40945 /* APerson.m in Sources */ = {isa = PBXBuildFile; fileRef = F50159561C182F9C00A40945 /* APerson.m */; };
+		F50159581C182F9C00A40945 /* APerson.m in Sources */ = {isa = PBXBuildFile; fileRef = F50159561C182F9C00A40945 /* APerson.m */; };
+		F50159591C182F9C00A40945 /* APerson.m in Sources */ = {isa = PBXBuildFile; fileRef = F50159561C182F9C00A40945 /* APerson.m */; };
+		F501595C1C182FB000A40945 /* AURL.m in Sources */ = {isa = PBXBuildFile; fileRef = F501595B1C182FB000A40945 /* AURL.m */; };
+		F501595D1C182FB000A40945 /* AURL.m in Sources */ = {isa = PBXBuildFile; fileRef = F501595B1C182FB000A40945 /* AURL.m */; };
+		F501595E1C182FB000A40945 /* AURL.m in Sources */ = {isa = PBXBuildFile; fileRef = F501595B1C182FB000A40945 /* AURL.m */; };
+		F50159611C182FBE00A40945 /* AEmoticon.m in Sources */ = {isa = PBXBuildFile; fileRef = F50159601C182FBE00A40945 /* AEmoticon.m */; };
+		F50159621C182FBE00A40945 /* AEmoticon.m in Sources */ = {isa = PBXBuildFile; fileRef = F50159601C182FBE00A40945 /* AEmoticon.m */; };
+		F50159631C182FBE00A40945 /* AEmoticon.m in Sources */ = {isa = PBXBuildFile; fileRef = F50159601C182FBE00A40945 /* AEmoticon.m */; };
+		F50159671C18323900A40945 /* ABaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F50159661C18323900A40945 /* ABaseModel.m */; };
+		F50159681C18323900A40945 /* ABaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F50159661C18323900A40945 /* ABaseModel.m */; };
+		F50159691C18323900A40945 /* ABaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F50159661C18323900A40945 /* ABaseModel.m */; };
+		F501596C1C18332300A40945 /* AStringConstruct.m in Sources */ = {isa = PBXBuildFile; fileRef = F501596B1C18332300A40945 /* AStringConstruct.m */; };
+		F501596D1C18332300A40945 /* AStringConstruct.m in Sources */ = {isa = PBXBuildFile; fileRef = F501596B1C18332300A40945 /* AStringConstruct.m */; };
+		F501596E1C18332300A40945 /* AStringConstruct.m in Sources */ = {isa = PBXBuildFile; fileRef = F501596B1C18332300A40945 /* AStringConstruct.m */; };
+		F50159721C18356500A40945 /* NSString+ChatParsing.m in Sources */ = {isa = PBXBuildFile; fileRef = F50159711C18356500A40945 /* NSString+ChatParsing.m */; };
+		F50159731C18356500A40945 /* NSString+ChatParsing.m in Sources */ = {isa = PBXBuildFile; fileRef = F50159711C18356500A40945 /* NSString+ChatParsing.m */; };
+		F50159741C18356500A40945 /* NSString+ChatParsing.m in Sources */ = {isa = PBXBuildFile; fileRef = F50159711C18356500A40945 /* NSString+ChatParsing.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +69,18 @@
 		F50159411C18277C00A40945 /* ATaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ATaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F50159451C18277C00A40945 /* ATaskUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATaskUITests.m; sourceTree = "<group>"; };
 		F50159471C18277C00A40945 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F50159551C182F9C00A40945 /* APerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APerson.h; sourceTree = "<group>"; };
+		F50159561C182F9C00A40945 /* APerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APerson.m; sourceTree = "<group>"; };
+		F501595A1C182FB000A40945 /* AURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AURL.h; sourceTree = "<group>"; };
+		F501595B1C182FB000A40945 /* AURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AURL.m; sourceTree = "<group>"; };
+		F501595F1C182FBE00A40945 /* AEmoticon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEmoticon.h; sourceTree = "<group>"; };
+		F50159601C182FBE00A40945 /* AEmoticon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEmoticon.m; sourceTree = "<group>"; };
+		F50159651C18323900A40945 /* ABaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABaseModel.h; sourceTree = "<group>"; };
+		F50159661C18323900A40945 /* ABaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABaseModel.m; sourceTree = "<group>"; };
+		F501596A1C18332300A40945 /* AStringConstruct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AStringConstruct.h; sourceTree = "<group>"; };
+		F501596B1C18332300A40945 /* AStringConstruct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AStringConstruct.m; sourceTree = "<group>"; };
+		F50159701C18356500A40945 /* NSString+ChatParsing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ChatParsing.h"; sourceTree = "<group>"; };
+		F50159711C18356500A40945 /* NSString+ChatParsing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ChatParsing.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +131,11 @@
 		F501591F1C18277B00A40945 /* ATask */ = {
 			isa = PBXGroup;
 			children = (
+				F501596F1C1834D600A40945 /* Categories */,
+				F50159541C182D0900A40945 /* View Controller */,
+				F50159531C182D0200A40945 /* Model */,
 				F50159231C18277B00A40945 /* AppDelegate.h */,
 				F50159241C18277B00A40945 /* AppDelegate.m */,
-				F50159261C18277B00A40945 /* ViewController.h */,
-				F50159271C18277B00A40945 /* ViewController.m */,
 				F50159291C18277C00A40945 /* Main.storyboard */,
 				F501592C1C18277C00A40945 /* Assets.xcassets */,
 				F501592E1C18277C00A40945 /* LaunchScreen.storyboard */,
@@ -138,6 +169,41 @@
 				F50159471C18277C00A40945 /* Info.plist */,
 			);
 			path = ATaskUITests;
+			sourceTree = "<group>";
+		};
+		F50159531C182D0200A40945 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F50159651C18323900A40945 /* ABaseModel.h */,
+				F50159661C18323900A40945 /* ABaseModel.m */,
+				F50159551C182F9C00A40945 /* APerson.h */,
+				F50159561C182F9C00A40945 /* APerson.m */,
+				F501595A1C182FB000A40945 /* AURL.h */,
+				F501595B1C182FB000A40945 /* AURL.m */,
+				F501595F1C182FBE00A40945 /* AEmoticon.h */,
+				F50159601C182FBE00A40945 /* AEmoticon.m */,
+				F501596A1C18332300A40945 /* AStringConstruct.h */,
+				F501596B1C18332300A40945 /* AStringConstruct.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		F50159541C182D0900A40945 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F50159261C18277B00A40945 /* ViewController.h */,
+				F50159271C18277B00A40945 /* ViewController.m */,
+			);
+			name = "View Controller";
+			sourceTree = "<group>";
+		};
+		F501596F1C1834D600A40945 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				F50159701C18356500A40945 /* NSString+ChatParsing.h */,
+				F50159711C18356500A40945 /* NSString+ChatParsing.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,9 +336,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F501595C1C182FB000A40945 /* AURL.m in Sources */,
+				F50159571C182F9C00A40945 /* APerson.m in Sources */,
+				F501596C1C18332300A40945 /* AStringConstruct.m in Sources */,
 				F50159281C18277B00A40945 /* ViewController.m in Sources */,
+				F50159671C18323900A40945 /* ABaseModel.m in Sources */,
+				F50159721C18356500A40945 /* NSString+ChatParsing.m in Sources */,
 				F50159251C18277B00A40945 /* AppDelegate.m in Sources */,
 				F50159221C18277B00A40945 /* main.m in Sources */,
+				F50159611C182FBE00A40945 /* AEmoticon.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +352,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F50159681C18323900A40945 /* ABaseModel.m in Sources */,
+				F50159581C182F9C00A40945 /* APerson.m in Sources */,
+				F50159731C18356500A40945 /* NSString+ChatParsing.m in Sources */,
+				F50159621C182FBE00A40945 /* AEmoticon.m in Sources */,
+				F501595D1C182FB000A40945 /* AURL.m in Sources */,
+				F501596D1C18332300A40945 /* AStringConstruct.m in Sources */,
 				F501593B1C18277C00A40945 /* ATaskTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,6 +366,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F50159691C18323900A40945 /* ABaseModel.m in Sources */,
+				F50159591C182F9C00A40945 /* APerson.m in Sources */,
+				F50159741C18356500A40945 /* NSString+ChatParsing.m in Sources */,
+				F50159631C182FBE00A40945 /* AEmoticon.m in Sources */,
+				F501595E1C182FB000A40945 /* AURL.m in Sources */,
+				F501596E1C18332300A40945 /* AStringConstruct.m in Sources */,
 				F50159461C18277C00A40945 /* ATaskUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
