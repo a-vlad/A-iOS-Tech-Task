@@ -1,5 +1,5 @@
 //
-//  AStringConstruct.h
+//  AMessageConstruct.h
 //  ATask
 //
 //  Created by Vlad on 9/12/2015.
@@ -12,7 +12,7 @@
 #import "AURL.h"
 #import "AEmoticon.h"
 
-@interface AStringConstruct : ABaseModel
+@interface AMessageConstruct : ABaseModel
 
 @property (nonatomic, readonly) NSArray<APerson*>   *persons;
 @property (nonatomic, readonly) NSArray<AURL*>      *urls;

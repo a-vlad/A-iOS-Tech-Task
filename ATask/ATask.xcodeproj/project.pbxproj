@@ -27,9 +27,9 @@
 		F50159671C18323900A40945 /* ABaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F50159661C18323900A40945 /* ABaseModel.m */; };
 		F50159681C18323900A40945 /* ABaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F50159661C18323900A40945 /* ABaseModel.m */; };
 		F50159691C18323900A40945 /* ABaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F50159661C18323900A40945 /* ABaseModel.m */; };
-		F501596C1C18332300A40945 /* AStringConstruct.m in Sources */ = {isa = PBXBuildFile; fileRef = F501596B1C18332300A40945 /* AStringConstruct.m */; };
-		F501596D1C18332300A40945 /* AStringConstruct.m in Sources */ = {isa = PBXBuildFile; fileRef = F501596B1C18332300A40945 /* AStringConstruct.m */; };
-		F501596E1C18332300A40945 /* AStringConstruct.m in Sources */ = {isa = PBXBuildFile; fileRef = F501596B1C18332300A40945 /* AStringConstruct.m */; };
+		F501596C1C18332300A40945 /* AMessageConstruct.m in Sources */ = {isa = PBXBuildFile; fileRef = F501596B1C18332300A40945 /* AMessageConstruct.m */; };
+		F501596D1C18332300A40945 /* AMessageConstruct.m in Sources */ = {isa = PBXBuildFile; fileRef = F501596B1C18332300A40945 /* AMessageConstruct.m */; };
+		F501596E1C18332300A40945 /* AMessageConstruct.m in Sources */ = {isa = PBXBuildFile; fileRef = F501596B1C18332300A40945 /* AMessageConstruct.m */; };
 		F50159721C18356500A40945 /* NSString+ChatParsing.m in Sources */ = {isa = PBXBuildFile; fileRef = F50159711C18356500A40945 /* NSString+ChatParsing.m */; };
 		F50159731C18356500A40945 /* NSString+ChatParsing.m in Sources */ = {isa = PBXBuildFile; fileRef = F50159711C18356500A40945 /* NSString+ChatParsing.m */; };
 		F50159741C18356500A40945 /* NSString+ChatParsing.m in Sources */ = {isa = PBXBuildFile; fileRef = F50159711C18356500A40945 /* NSString+ChatParsing.m */; };
@@ -77,8 +77,8 @@
 		F50159601C182FBE00A40945 /* AEmoticon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEmoticon.m; sourceTree = "<group>"; };
 		F50159651C18323900A40945 /* ABaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABaseModel.h; sourceTree = "<group>"; };
 		F50159661C18323900A40945 /* ABaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABaseModel.m; sourceTree = "<group>"; };
-		F501596A1C18332300A40945 /* AStringConstruct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AStringConstruct.h; sourceTree = "<group>"; };
-		F501596B1C18332300A40945 /* AStringConstruct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AStringConstruct.m; sourceTree = "<group>"; };
+		F501596A1C18332300A40945 /* AMessageConstruct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMessageConstruct.h; sourceTree = "<group>"; };
+		F501596B1C18332300A40945 /* AMessageConstruct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMessageConstruct.m; sourceTree = "<group>"; };
 		F50159701C18356500A40945 /* NSString+ChatParsing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ChatParsing.h"; sourceTree = "<group>"; };
 		F50159711C18356500A40945 /* NSString+ChatParsing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ChatParsing.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,15 +131,12 @@
 		F501591F1C18277B00A40945 /* ATask */ = {
 			isa = PBXGroup;
 			children = (
+				F50159751C183C5C00A40945 /* UI Assets */,
 				F501596F1C1834D600A40945 /* Categories */,
-				F50159541C182D0900A40945 /* View Controller */,
+				F50159541C182D0900A40945 /* View Controllers */,
 				F50159531C182D0200A40945 /* Model */,
 				F50159231C18277B00A40945 /* AppDelegate.h */,
 				F50159241C18277B00A40945 /* AppDelegate.m */,
-				F50159291C18277C00A40945 /* Main.storyboard */,
-				F501592C1C18277C00A40945 /* Assets.xcassets */,
-				F501592E1C18277C00A40945 /* LaunchScreen.storyboard */,
-				F50159311C18277C00A40945 /* Info.plist */,
 				F50159201C18277B00A40945 /* Supporting Files */,
 			);
 			path = ATask;
@@ -148,6 +145,7 @@
 		F50159201C18277B00A40945 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F50159311C18277C00A40945 /* Info.plist */,
 				F50159211C18277B00A40945 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -176,25 +174,25 @@
 			children = (
 				F50159651C18323900A40945 /* ABaseModel.h */,
 				F50159661C18323900A40945 /* ABaseModel.m */,
+				F501596A1C18332300A40945 /* AMessageConstruct.h */,
+				F501596B1C18332300A40945 /* AMessageConstruct.m */,
 				F50159551C182F9C00A40945 /* APerson.h */,
 				F50159561C182F9C00A40945 /* APerson.m */,
 				F501595A1C182FB000A40945 /* AURL.h */,
 				F501595B1C182FB000A40945 /* AURL.m */,
 				F501595F1C182FBE00A40945 /* AEmoticon.h */,
 				F50159601C182FBE00A40945 /* AEmoticon.m */,
-				F501596A1C18332300A40945 /* AStringConstruct.h */,
-				F501596B1C18332300A40945 /* AStringConstruct.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
 		};
-		F50159541C182D0900A40945 /* View Controller */ = {
+		F50159541C182D0900A40945 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				F50159261C18277B00A40945 /* ViewController.h */,
 				F50159271C18277B00A40945 /* ViewController.m */,
 			);
-			name = "View Controller";
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 		F501596F1C1834D600A40945 /* Categories */ = {
@@ -204,6 +202,16 @@
 				F50159711C18356500A40945 /* NSString+ChatParsing.m */,
 			);
 			name = Categories;
+			sourceTree = "<group>";
+		};
+		F50159751C183C5C00A40945 /* UI Assets */ = {
+			isa = PBXGroup;
+			children = (
+				F50159291C18277C00A40945 /* Main.storyboard */,
+				F501592C1C18277C00A40945 /* Assets.xcassets */,
+				F501592E1C18277C00A40945 /* LaunchScreen.storyboard */,
+			);
+			name = "UI Assets";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,7 +346,7 @@
 			files = (
 				F501595C1C182FB000A40945 /* AURL.m in Sources */,
 				F50159571C182F9C00A40945 /* APerson.m in Sources */,
-				F501596C1C18332300A40945 /* AStringConstruct.m in Sources */,
+				F501596C1C18332300A40945 /* AMessageConstruct.m in Sources */,
 				F50159281C18277B00A40945 /* ViewController.m in Sources */,
 				F50159671C18323900A40945 /* ABaseModel.m in Sources */,
 				F50159721C18356500A40945 /* NSString+ChatParsing.m in Sources */,
@@ -357,7 +365,7 @@
 				F50159731C18356500A40945 /* NSString+ChatParsing.m in Sources */,
 				F50159621C182FBE00A40945 /* AEmoticon.m in Sources */,
 				F501595D1C182FB000A40945 /* AURL.m in Sources */,
-				F501596D1C18332300A40945 /* AStringConstruct.m in Sources */,
+				F501596D1C18332300A40945 /* AMessageConstruct.m in Sources */,
 				F501593B1C18277C00A40945 /* ATaskTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -371,7 +379,7 @@
 				F50159741C18356500A40945 /* NSString+ChatParsing.m in Sources */,
 				F50159631C182FBE00A40945 /* AEmoticon.m in Sources */,
 				F501595E1C182FB000A40945 /* AURL.m in Sources */,
-				F501596E1C18332300A40945 /* AStringConstruct.m in Sources */,
+				F501596E1C18332300A40945 /* AMessageConstruct.m in Sources */,
 				F50159461C18277C00A40945 /* ATaskUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -497,6 +505,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = ATask/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -509,6 +518,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = ATask/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

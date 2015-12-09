@@ -14,22 +14,28 @@
 
 @end
 
+static NSString* const kEmoticonJSONPlaceholder = @"\"%@\"";
+
 
 @implementation AEmoticon
 
 - (instancetype)initWithString:(NSString*)string
 {
-    self = [super init];
+    self = [super initWithString:string];
     if (self) {
-#warning - TODO:...
+        if (string && string.length > 2)
+        {
+            _emoticonName = [string substringWithRange:NSMakeRange(1, string.length-2)];
+        }
     }
     return self;
 }
 
 - (NSString*)generateJSONString
 {
-#warning - TODO:...
-    return nil;
+    NSString *jsonString = [NSString stringWithFormat:kEmoticonJSONPlaceholder,self.emoticonName];
+    
+    return jsonString;
 }
 
 @end

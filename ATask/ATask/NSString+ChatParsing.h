@@ -14,21 +14,26 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSString_ChatParsing : NSObject
+#import "APerson.h"
+#import "AURL.h"
+#import "AEmoticon.h"
+
+
+@interface NSString (ChatParsing)
 
 /**
  *  Returns all string occurenses of @mention
  */
-+ (NSArray<NSString*>*)parsePersons;
+- (NSArray<APerson*>*)parsePersons;
 
 /**
  *  Returns all string occurenses URLs
  */
-+ (NSArray<NSString*>*)parseURLs;
+- (NSArray<AURL*>*)parseURLs;
 
 /**
  *  Returns all string emoticons
  */
-+ (NSArray<NSString*>*)parseEmoticons;
+- (NSArray<AEmoticon*>*)parseEmoticons;
 
 @end

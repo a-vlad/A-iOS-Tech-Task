@@ -14,22 +14,27 @@
 
 @end
 
+static NSString* const kPersonJSONPlaceholder = @"\"%@\"";
+
 
 @implementation APerson
 
 - (instancetype)initWithString:(NSString*)string
 {
-    self = [super init];
+    self = [super initWithString:string];
     if (self) {
-#warning - TODO:...
+        if (string && (string.length > 0)){
+            _name = [string substringFromIndex:1];  // from 1 as we ignore the @ symbol
+        }
     }
     return self;
 }
 
 - (NSString*)generateJSONString
 {
-#warning - TODO:...
-    return nil;
+    NSString *jsonString = [NSString stringWithFormat:kPersonJSONPlaceholder,self.name];
+    
+    return jsonString;
 }
 
 @end
