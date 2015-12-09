@@ -16,12 +16,12 @@
     NSMutableArray *result = [NSMutableArray new];
     
     NSRange searchRange = NSMakeRange(0, self.length);
-    NSString *pattern = @"(?<=^|(?<=[^a-zA-Z0-9-\\.]))@([A-Za-z]+[A-Za-z0-9]+)";
+    NSString *pattern = @"@([A-Za-z]+[A-Za-z0-9]+)";
     NSError  *error = nil;
     
-    NSRegularExpression* regex = [NSRegularExpression regularExpressionWithPattern:pattern options:0 error:&error];
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:pattern options:0 error:&error];
     
-    NSArray* matches = [regex matchesInString:self options:0 range: searchRange];
+    NSArray *matches = [regex matchesInString:self options:0 range: searchRange];
     
     for (NSTextCheckingResult *match in matches) {
         NSString *matchText = [self substringWithRange:[match range]];
@@ -37,12 +37,12 @@
     NSMutableArray *result = [NSMutableArray new];
     
     NSRange searchRange = NSMakeRange(0, self.length);
-    NSString *pattern = @"(?<=^|(?<=[^a-zA-Z0-9-\\.]))@([A-Za-z]+[A-Za-z0-9]+)";
+    NSString *pattern = @"(https?:\\/\\/([^ ])+)";
     NSError  *error = nil;
     
-    NSRegularExpression* regex = [NSRegularExpression regularExpressionWithPattern:pattern options:0 error:&error];
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:pattern options:0 error:&error];
     
-    NSArray* matches = [regex matchesInString:self options:0 range: searchRange];
+    NSArray *matches = [regex matchesInString:self options:0 range: searchRange];
     
     for (NSTextCheckingResult *match in matches) {
         NSString *matchText = [self substringWithRange:[match range]];
@@ -58,12 +58,12 @@
     NSMutableArray *result = [NSMutableArray new];
     
     NSRange searchRange = NSMakeRange(0, self.length);
-    NSString *pattern = @"(?<=^|(?<=[^a-zA-Z0-9-\\.]))@([A-Za-z]+[A-Za-z0-9]+)";
+    NSString *pattern = @"\\(([A-Za-z]+[A-Za-z0-9]+)\\)";
     NSError  *error = nil;
     
-    NSRegularExpression* regex = [NSRegularExpression regularExpressionWithPattern:pattern options:0 error:&error];
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:pattern options:0 error:&error];
     
-    NSArray* matches = [regex matchesInString:self options:0 range: searchRange];
+    NSArray *matches = [regex matchesInString:self options:0 range: searchRange];
     
     for (NSTextCheckingResult *match in matches) {
         NSString *matchText = [self substringWithRange:[match range]];

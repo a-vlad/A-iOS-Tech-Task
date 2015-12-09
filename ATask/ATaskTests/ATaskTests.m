@@ -33,7 +33,7 @@
 // Tests parsing String into JSON with @mentions
 - (void)testParsingMentions
 {
-    NSString *testString = @"@chris you around?";
+    NSString *testString = @"@chris you around? @vlad are you also around? \n @newline can you parse this? or this @john";
     
     AMessageConstruct *construct = [[AMessageConstruct alloc] initWithString:testString];
     
