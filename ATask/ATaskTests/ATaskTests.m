@@ -122,4 +122,23 @@
     XCTAssertEqual(construct.urls.count, 1);
 }
 
+// Simple URL title check
+- (void)testParsingURLTitle
+{
+    NSString *testString = @"@bob @john (success) such a cool feature; https://twitter.com/jdorfman/status/430511497475670016";
+    
+    AMessageConstruct *construct = [[AMessageConstruct alloc] initWithString:testString];
+    
+    NSString *jsonString = [construct jsonString];
+    NSLog(@"%@",jsonString);
+    
+    
+    XCTAssert(jsonString);
+    
+    // check parsing count
+    XCTAssertEqual(construct.urls.count, 1);
+    XCTAssertGreaterThan(construct.urls[0].urlTitle.length, 1); // check url title has been determined
+    
+}
+
 @end
