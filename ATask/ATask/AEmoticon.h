@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-#import "ABaseModel.h"
+#import "AMessageComponent.h"
 
-@interface AEmoticon : ABaseModel
+@interface AEmoticon : AMessageComponent
 
 @property (nonatomic, readonly) NSString *emoticonName;
 

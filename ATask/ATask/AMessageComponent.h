@@ -1,5 +1,5 @@
 //
-//  ABaseModel.h
+//  AMessageComponent.h
 //  ATask
 //
 //  Created by Vlad on 9/12/2015.
@@ -17,13 +17,17 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ABaseModel : NSObject
+@interface AMessageComponent : NSObject
 
+/**
+ *  Shared constructor of all message components. 
+ *  All message components can be constructed out of a message string.
+ */
 - (instancetype)initWithString:(NSString*)string;
 
 /**
- *  Generates JSON string from
+ *  Generates JSON string from message component properties
  */
-- (NSString*)generateJSONString;
+- (NSString*)jsonString;
 
 @end

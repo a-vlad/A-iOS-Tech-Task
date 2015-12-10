@@ -15,10 +15,12 @@
 @property (nonatomic, strong) NSArray<APerson*>   *persons;
 @property (nonatomic, strong) NSArray<AURL*>      *urls;
 @property (nonatomic, strong) NSArray<AEmoticon*> *emoticons;
+@property (nonatomic, strong) NSString            *message;
 
 @end
 
-static NSString* const kMessageConstructJSONPlaceholder = @"{\"mentions\" : [ \n %@ \n ], \"emoticons\" : [ \n %@ \n ], \"links\" : [ \n %@ \n ], }";
+
+static NSString* const kMessageConstructJSONPlaceholder = @"{\n\"mentions\" : [ \n %@ \n ], \n\"emoticons\" : [ \n %@ \n ], \n\"links\" : [ \n %@ \n ] \n}";
 
 
 @implementation AMessageConstruct
@@ -31,11 +33,12 @@ static NSString* const kMessageConstructJSONPlaceholder = @"{\"mentions\" : [ \n
         _persons    = [string parsePersons];
         _urls       = [string parseURLs];
         _emoticons  = [string parseEmoticons];
+        _message    = string;
     }
     return self;
 }
 
-- (NSString*)generateJSONString
+- (NSString*)jsonString
 {
     NSMutableString *personsJson    = [NSMutableString new];
     NSMutableString *urlsJson       = [NSMutableString new];
@@ -44,7 +47,7 @@ static NSString* const kMessageConstructJSONPlaceholder = @"{\"mentions\" : [ \n
     // create list of mentioned persons
     for (APerson *person in self.persons)
     {
-        [personsJson appendString:[person generateJSONString]];
+        [personsJson appendString:[person jsonString]];
         
         // append comma if more objects in list
         if ([[self.persons lastObject] isEqual:person] == NO)
@@ -54,7 +57,7 @@ static NSString* const kMessageConstructJSONPlaceholder = @"{\"mentions\" : [ \n
     // create list of urls
     for (AURL *url in self.urls)
     {
-        [urlsJson appendString:[url generateJSONString]];
+        [urlsJson appendString:[url jsonString]];
         
         // append comma if more objects in list
         if ([[self.urls lastObject] isEqual:url] == NO)
@@ -64,7 +67,7 @@ static NSString* const kMessageConstructJSONPlaceholder = @"{\"mentions\" : [ \n
     // create list of emoticons
     for (AEmoticon *emoticon in self.emoticons)
     {
-        [emoticonsJson appendString:[emoticon generateJSONString]];
+        [emoticonsJson appendString:[emoticon jsonString]];
         
         // append comma if more objects in list
         if ([[self.emoticons lastObject] isEqual:emoticon] == NO)

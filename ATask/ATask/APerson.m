@@ -30,7 +30,7 @@ static NSString* const kPersonJSONPlaceholder = @"\"%@\"";
     return self;
 }
 
-- (NSString*)generateJSONString
+- (NSString*)jsonString
 {
     NSString *jsonString = [NSString stringWithFormat:kPersonJSONPlaceholder,self.name];
     

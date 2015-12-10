@@ -32,7 +32,7 @@ static NSString* const kURLJSONPlaceholder = @"{ \"url:\"\"%@\"\n, \"title:\"\"%
     return self;
 }
 
-- (NSString*)generateJSONString
+- (NSString*)jsonString
 {
     NSString *jsonString = [NSString stringWithFormat:kURLJSONPlaceholder,self.urlPath,self.urlTitle];
     
