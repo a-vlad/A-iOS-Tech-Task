@@ -31,7 +31,7 @@ static NSString* const kEmoticonJSONPlaceholder = @"\"%@\"";
     return self;
 }
 
-- (NSString*)generateJSONString
+- (NSString*)jsonString
 {
     NSString *jsonString = [NSString stringWithFormat:kEmoticonJSONPlaceholder,self.emoticonName];
     

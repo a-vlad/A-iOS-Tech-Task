@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-#import "ABaseModel.h"
+#import "AMessageComponent.h"
 
-@interface AURL : ABaseModel
+@interface AURL : AMessageComponent
 
 @property (nonatomic, readonly) NSURL       *urlPath;
 @property (nonatomic, readonly) NSString    *urlTitle;

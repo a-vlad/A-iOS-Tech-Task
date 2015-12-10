@@ -8,6 +8,10 @@
 
 #import "NSString+ChatParsing.h"
 
+static NSString* const kEmoticonRegEx   = @"\\B(\\([^ ]*?\\))";
+static NSString* const kMentionRegEx    = @"\\B(@[^ ]*)";
+static NSString* const kURLRegEx        = @"\\b(https?:\\/\\/[^ ]+|www\\.[^ ]+)";
+
 
 @implementation NSString (ChatParsing)
 
@@ -16,17 +20,18 @@
     NSMutableArray *result = [NSMutableArray new];
     
     NSRange searchRange = NSMakeRange(0, self.length);
-    NSString *pattern = @"@([A-Za-z]+[A-Za-z0-9]+)";
+    NSString *pattern = kMentionRegEx;
     NSError  *error = nil;
     
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:pattern options:0 error:&error];
     
-    NSArray *matches = [regex matchesInString:self options:0 range: searchRange];
-    
-    for (NSTextCheckingResult *match in matches) {
-        NSString *matchText = [self substringWithRange:[match range]];
-        APerson *person = [[APerson alloc] initWithString:matchText];
-        [result addObject:person];
+    if (!error){
+        NSArray *matches = [regex matchesInString:self options:0 range: searchRange];
+        for (NSTextCheckingResult *match in matches) {
+            NSString *matchText = [self substringWithRange:[match range]];
+            APerson *person = [[APerson alloc] initWithString:matchText];
+            [result addObject:person];
+        }
     }
     
     return result;
@@ -37,17 +42,18 @@
     NSMutableArray *result = [NSMutableArray new];
     
     NSRange searchRange = NSMakeRange(0, self.length);
-    NSString *pattern = @"(https?:\\/\\/([^ ])+)";
+    NSString *pattern = kURLRegEx;
     NSError  *error = nil;
     
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:pattern options:0 error:&error];
     
-    NSArray *matches = [regex matchesInString:self options:0 range: searchRange];
-    
-    for (NSTextCheckingResult *match in matches) {
-        NSString *matchText = [self substringWithRange:[match range]];
-        AURL *url = [[AURL alloc] initWithString:matchText];
-        [result addObject:url];
+    if (!error){
+        NSArray *matches = [regex matchesInString:self options:0 range: searchRange];
+        for (NSTextCheckingResult *match in matches) {
+            NSString *matchText = [self substringWithRange:[match range]];
+            AURL *url = [[AURL alloc] initWithString:matchText];
+            [result addObject:url];
+        }
     }
     
     return result;
@@ -58,17 +64,18 @@
     NSMutableArray *result = [NSMutableArray new];
     
     NSRange searchRange = NSMakeRange(0, self.length);
-    NSString *pattern = @"\\(([A-Za-z]+[A-Za-z0-9]+)\\)";
+    NSString *pattern = kEmoticonRegEx;
     NSError  *error = nil;
     
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:pattern options:0 error:&error];
     
-    NSArray *matches = [regex matchesInString:self options:0 range: searchRange];
-    
-    for (NSTextCheckingResult *match in matches) {
-        NSString *matchText = [self substringWithRange:[match range]];
-        AEmoticon *person = [[AEmoticon alloc] initWithString:matchText];
-        [result addObject:person];
+    if (!error){
+        NSArray *matches = [regex matchesInString:self options:0 range: searchRange];
+        for (NSTextCheckingResult *match in matches) {
+            NSString *matchText = [self substringWithRange:[match range]];
+            AEmoticon *person = [[AEmoticon alloc] initWithString:matchText];
+            [result addObject:person];
+        }
     }
     
     return result;

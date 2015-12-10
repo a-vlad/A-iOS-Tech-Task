@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-#import "ABaseModel.h"
+#import "AMessageComponent.h"
 
-@interface APerson : ABaseModel
+@interface APerson : AMessageComponent
 
 @property (nonatomic, readonly) NSString *name;
 

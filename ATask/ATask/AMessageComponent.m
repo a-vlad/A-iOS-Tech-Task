@@ -1,14 +1,14 @@
 //
-//  ABaseModel.m
+//  AMessageComponent.m
 //  ATask
 //
 //  Created by Vlad on 9/12/2015.
 //  Copyright © 2015 Vlad Paraschiv. All rights reserved.
 //
 
-#import "ABaseModel.h"
+#import "AMessageComponent.h"
 
-@implementation ABaseModel
+@implementation AMessageComponent
 
 - (instancetype)initWithString:(NSString*)string
 {
@@ -22,7 +22,7 @@
 /**
  *  Generates JSON string model properties
  */
-- (NSString*)generateJSONString
+- (NSString*)jsonString
 {
     /* nothing to do here, subclasses will implement their own init method accordingly */
     return nil;
