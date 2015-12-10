@@ -8,6 +8,8 @@
 
 #import "AURL.h"
 
+#import "TFHpple.h"
+
 @interface AURL ()
 
 @property (nonatomic, strong) NSURL       *urlPath;
@@ -47,11 +49,24 @@ static NSString* const kURLJSONPlaceholder = @"{ \"url:\"\"%@\"\n, \"title:\"\"%
 /**
  *  Resolves URL title for a given URL
  *  @param urlPath
+ *  @return page title extracted from DOM or empty string if not found
  */
 - (NSString*)resolveURLTitle:(NSURL*)urlPath
 {
-#warning - TODO:...
-    return @"";
+    NSData *urlData = [NSData dataWithContentsOfURL:urlPath];
+    
+    TFHpple *parser = [TFHpple hppleWithHTMLData:urlData];
+    NSString *titleXPath = @"/html/head/title";
+    
+    NSArray *matches = [parser searchWithXPathQuery:titleXPath];
+    TFHppleElement *titleElement = [matches firstObject];
+    
+    NSString *title = @"";
+    if (titleElement){
+        title = titleElement.content;
+    }
+
+    return title;
 }
 
 @end

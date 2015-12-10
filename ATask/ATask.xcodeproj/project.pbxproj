@@ -33,6 +33,21 @@
 		F50159721C18356500A40945 /* NSString+ChatParsing.m in Sources */ = {isa = PBXBuildFile; fileRef = F50159711C18356500A40945 /* NSString+ChatParsing.m */; };
 		F50159731C18356500A40945 /* NSString+ChatParsing.m in Sources */ = {isa = PBXBuildFile; fileRef = F50159711C18356500A40945 /* NSString+ChatParsing.m */; };
 		F50159741C18356500A40945 /* NSString+ChatParsing.m in Sources */ = {isa = PBXBuildFile; fileRef = F50159711C18356500A40945 /* NSString+ChatParsing.m */; };
+		F5DA2F5A1C1902AE00B9EA04 /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DA2F551C1902AE00B9EA04 /* TFHpple.m */; };
+		F5DA2F5B1C1902AE00B9EA04 /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DA2F551C1902AE00B9EA04 /* TFHpple.m */; };
+		F5DA2F5C1C1902AE00B9EA04 /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DA2F551C1902AE00B9EA04 /* TFHpple.m */; };
+		F5DA2F5D1C1902AE00B9EA04 /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DA2F571C1902AE00B9EA04 /* TFHppleElement.m */; };
+		F5DA2F5E1C1902AE00B9EA04 /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DA2F571C1902AE00B9EA04 /* TFHppleElement.m */; };
+		F5DA2F5F1C1902AE00B9EA04 /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DA2F571C1902AE00B9EA04 /* TFHppleElement.m */; };
+		F5DA2F601C1902AE00B9EA04 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DA2F591C1902AE00B9EA04 /* XPathQuery.m */; };
+		F5DA2F611C1902AE00B9EA04 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DA2F591C1902AE00B9EA04 /* XPathQuery.m */; };
+		F5DA2F621C1902AE00B9EA04 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DA2F591C1902AE00B9EA04 /* XPathQuery.m */; };
+		F5DA2F641C1902BC00B9EA04 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = F5DA2F631C1902BC00B9EA04 /* LICENSE.txt */; };
+		F5DA2F651C1902BC00B9EA04 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = F5DA2F631C1902BC00B9EA04 /* LICENSE.txt */; };
+		F5DA2F661C1902BC00B9EA04 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = F5DA2F631C1902BC00B9EA04 /* LICENSE.txt */; };
+		F5DA2F6A1C19042A00B9EA04 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F5DA2F691C19042A00B9EA04 /* libxml2.2.dylib */; };
+		F5DA2F6B1C19084600B9EA04 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F5DA2F691C19042A00B9EA04 /* libxml2.2.dylib */; };
+		F5DA2F6C1C19084600B9EA04 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F5DA2F691C19042A00B9EA04 /* libxml2.2.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +96,14 @@
 		F501596B1C18332300A40945 /* AMessageConstruct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMessageConstruct.m; sourceTree = "<group>"; };
 		F50159701C18356500A40945 /* NSString+ChatParsing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ChatParsing.h"; sourceTree = "<group>"; };
 		F50159711C18356500A40945 /* NSString+ChatParsing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ChatParsing.m"; sourceTree = "<group>"; };
+		F5DA2F541C1902AE00B9EA04 /* TFHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHpple.h; sourceTree = "<group>"; };
+		F5DA2F551C1902AE00B9EA04 /* TFHpple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHpple.m; sourceTree = "<group>"; };
+		F5DA2F561C1902AE00B9EA04 /* TFHppleElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHppleElement.h; sourceTree = "<group>"; };
+		F5DA2F571C1902AE00B9EA04 /* TFHppleElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHppleElement.m; sourceTree = "<group>"; };
+		F5DA2F581C1902AE00B9EA04 /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
+		F5DA2F591C1902AE00B9EA04 /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
+		F5DA2F631C1902BC00B9EA04 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		F5DA2F691C19042A00B9EA04 /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = ../../../../usr/lib/libxml2.2.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5DA2F6A1C19042A00B9EA04 /* libxml2.2.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5DA2F6B1C19084600B9EA04 /* libxml2.2.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5DA2F6C1C19084600B9EA04 /* libxml2.2.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				F501591F1C18277B00A40945 /* ATask */,
+				F5DA2F521C19028A00B9EA04 /* Frameworks */,
 				F50159391C18277C00A40945 /* ATaskTests */,
 				F50159441C18277C00A40945 /* ATaskUITests */,
 				F501591E1C18277B00A40945 /* Products */,
@@ -212,6 +239,29 @@
 				F501592E1C18277C00A40945 /* LaunchScreen.storyboard */,
 			);
 			name = "UI Assets";
+			sourceTree = "<group>";
+		};
+		F5DA2F521C19028A00B9EA04 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F5DA2F691C19042A00B9EA04 /* libxml2.2.dylib */,
+				F5DA2F531C19029700B9EA04 /* Hpple */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F5DA2F531C19029700B9EA04 /* Hpple */ = {
+			isa = PBXGroup;
+			children = (
+				F5DA2F631C1902BC00B9EA04 /* LICENSE.txt */,
+				F5DA2F541C1902AE00B9EA04 /* TFHpple.h */,
+				F5DA2F551C1902AE00B9EA04 /* TFHpple.m */,
+				F5DA2F561C1902AE00B9EA04 /* TFHppleElement.h */,
+				F5DA2F571C1902AE00B9EA04 /* TFHppleElement.m */,
+				F5DA2F581C1902AE00B9EA04 /* XPathQuery.h */,
+				F5DA2F591C1902AE00B9EA04 /* XPathQuery.m */,
+			);
+			name = Hpple;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,6 +367,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5DA2F641C1902BC00B9EA04 /* LICENSE.txt in Resources */,
 				F50159301C18277C00A40945 /* LaunchScreen.storyboard in Resources */,
 				F501592D1C18277C00A40945 /* Assets.xcassets in Resources */,
 				F501592B1C18277C00A40945 /* Main.storyboard in Resources */,
@@ -327,6 +378,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5DA2F651C1902BC00B9EA04 /* LICENSE.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +386,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5DA2F661C1902BC00B9EA04 /* LICENSE.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,10 +402,13 @@
 				F501596C1C18332300A40945 /* AMessageConstruct.m in Sources */,
 				F50159281C18277B00A40945 /* ViewController.m in Sources */,
 				F50159671C18323900A40945 /* AMessageComponent.m in Sources */,
+				F5DA2F5A1C1902AE00B9EA04 /* TFHpple.m in Sources */,
 				F50159721C18356500A40945 /* NSString+ChatParsing.m in Sources */,
 				F50159251C18277B00A40945 /* AppDelegate.m in Sources */,
 				F50159221C18277B00A40945 /* main.m in Sources */,
 				F50159611C182FBE00A40945 /* AEmoticon.m in Sources */,
+				F5DA2F601C1902AE00B9EA04 /* XPathQuery.m in Sources */,
+				F5DA2F5D1C1902AE00B9EA04 /* TFHppleElement.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,11 +418,14 @@
 			files = (
 				F50159681C18323900A40945 /* AMessageComponent.m in Sources */,
 				F50159581C182F9C00A40945 /* APerson.m in Sources */,
+				F5DA2F611C1902AE00B9EA04 /* XPathQuery.m in Sources */,
 				F50159731C18356500A40945 /* NSString+ChatParsing.m in Sources */,
 				F50159621C182FBE00A40945 /* AEmoticon.m in Sources */,
 				F501595D1C182FB000A40945 /* AURL.m in Sources */,
 				F501596D1C18332300A40945 /* AMessageConstruct.m in Sources */,
+				F5DA2F5E1C1902AE00B9EA04 /* TFHppleElement.m in Sources */,
 				F501593B1C18277C00A40945 /* ATaskTests.m in Sources */,
+				F5DA2F5B1C1902AE00B9EA04 /* TFHpple.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,11 +435,14 @@
 			files = (
 				F50159691C18323900A40945 /* AMessageComponent.m in Sources */,
 				F50159591C182F9C00A40945 /* APerson.m in Sources */,
+				F5DA2F621C1902AE00B9EA04 /* XPathQuery.m in Sources */,
 				F50159741C18356500A40945 /* NSString+ChatParsing.m in Sources */,
 				F50159631C182FBE00A40945 /* AEmoticon.m in Sources */,
 				F501595E1C182FB000A40945 /* AURL.m in Sources */,
 				F501596E1C18332300A40945 /* AMessageConstruct.m in Sources */,
+				F5DA2F5F1C1902AE00B9EA04 /* TFHppleElement.m in Sources */,
 				F50159461C18277C00A40945 /* ATaskUITests.m in Sources */,
+				F5DA2F5C1C1902AE00B9EA04 /* TFHpple.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,6 +517,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "${SDKROOT}/usr/include/libxml2";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -493,6 +556,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "${SDKROOT}/usr/include/libxml2";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
