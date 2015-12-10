@@ -13,6 +13,12 @@
 @interface AURL : AMessageComponent
 
 @property (nonatomic, readonly) NSURL       *urlPath;
-@property (nonatomic, readonly) NSString    *urlTitle;
+@property (nonatomic, readonly) NSString    *urlTitle;  // Is KVO complient
+
+/**
+ *  Asynchronisly retrieves URL title and populates 
+ *  instance with title.
+ */
+- (void)resolveURLTitle;
 
 @end

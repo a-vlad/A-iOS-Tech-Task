@@ -8,9 +8,9 @@
 
 #import "NSString+ChatParsing.h"
 
-static NSString* const kEmoticonRegEx   = @"\\B(\\([^ ]*?\\))";
-static NSString* const kMentionRegEx    = @"\\B(@[^ ]*)";
-static NSString* const kURLRegEx        = @"\\b(https?:\\/\\/[^ ]+|www\\.[^ ]+)";
+static NSString* const kEmoticonRegEx   = @"\\B(\\(.[^ \\s]*?\\))";
+static NSString* const kMentionRegEx    = @"\\B(@.[^ \\s]*)";
+static NSString* const kURLRegEx        = @"\\b(https?:\\/\\/[^ \\s]+|www\\.[^ \\s]+)";
 
 
 @implementation NSString (ChatParsing)

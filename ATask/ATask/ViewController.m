@@ -17,6 +17,8 @@
 @property (nonatomic, weak) IBOutlet UITextView *chatTextView;
 @property (nonatomic, weak) IBOutlet UITextView *jsonTextView;
 
+@property (nonatomic, strong) AMessageConstruct *stringConstruct;
+
 @end
 
 
@@ -55,27 +57,31 @@
 #pragma mark - UIKeyboard Notification Handling
 //=============================================
 
-- (void)keyboardWillHide:(NSNotification *)n
+- (void)keyboardWillHide:(NSNotification *)notification
 {
+    // get the size of the keyboard
+    NSDictionary *userInfo = [notification userInfo];
+    NSNumber *animationLength = [userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey]; // so we can sync up animation
+    
     // resize views
     self.bottomConstraint.constant = 0;
-    [self.view setNeedsLayout];
+    [self.view setNeedsUpdateConstraints];
     
-    [UIView animateWithDuration:0.2 animations:^{
+    [UIView animateWithDuration:animationLength.floatValue animations:^{
         [self.view layoutIfNeeded];
     }];
 }
 
-- (void)keyboardWillShow:(NSNotification *)n
+- (void)keyboardWillShow:(NSNotification *)notification
 {
     // get the size of the keyboard
-    NSDictionary* userInfo = [n userInfo];
+    NSDictionary *userInfo = [notification userInfo];
     CGSize keyboardSize = [[userInfo objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
     NSNumber *animationLength = [userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey]; // so we can sync up animation
     
     // resize views
     self.bottomConstraint.constant = keyboardSize.height;
-    [self.view setNeedsLayout];
+    [self.view setNeedsUpdateConstraints];
     
     [UIView animateWithDuration:animationLength.floatValue animations:^{
         [self.view layoutIfNeeded];
@@ -89,8 +95,7 @@
 
 - (void)textViewDidChange:(UITextView *)textView
 {
-    if (textView == self.chatTextView)
-    {
+    if (textView == self.chatTextView) {
         [self updateJsonText];
     }
 }
@@ -105,8 +110,34 @@
  */
 - (void)updateJsonText
 {
-    AMessageConstruct *construct = [[AMessageConstruct alloc] initWithString:self.chatTextView.text];
-    self.jsonTextView.text = [construct jsonString];
+    // remove all KVO for current string construct
+    for (AURL *url in self.stringConstruct.urls)
+        [url removeObserver:self forKeyPath:@"urlTitle"];
+    
+    self.stringConstruct = [[AMessageConstruct alloc] initWithString:self.chatTextView.text];
+    self.jsonTextView.text = [self.stringConstruct jsonString];
+    
+    // set KVO for all URLs so we can update UI when they have been updated
+    for (AURL *url in self.stringConstruct.urls) {
+        [url addObserver:self
+              forKeyPath:@"urlTitle"
+                 options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld
+                 context:nil];
+    }
+}
+
+/**
+ *  KVO observer method called when change is detected
+ */
+-(void)observeValueForKeyPath:(NSString*)keyPath ofObject:(id)object change:(NSDictionary*)change context:(void*)context
+{
+    // update json string textview with newly resolved urlTitle
+    if ([keyPath isEqualToString:@"urlTitle"]) {
+        // ui changes must be done from main thread
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            self.jsonTextView.text = [self.stringConstruct jsonString];
+        });
+    }
 }
 
 @end
