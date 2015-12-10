@@ -51,7 +51,7 @@ static NSString* const kMessageConstructJSONPlaceholder = @"{\n\"mentions\" : [ 
         
         // append comma if more objects in list
         if ([[self.persons lastObject] isEqual:person] == NO)
-            [personsJson appendString:@","];
+            [personsJson appendString:@", "];
     }
 
     // create list of urls
@@ -61,7 +61,7 @@ static NSString* const kMessageConstructJSONPlaceholder = @"{\n\"mentions\" : [ 
         
         // append comma if more objects in list
         if ([[self.urls lastObject] isEqual:url] == NO)
-            [urlsJson appendString:@","];
+            [urlsJson appendString:@", "];
     }
     
     // create list of emoticons
@@ -71,7 +71,7 @@ static NSString* const kMessageConstructJSONPlaceholder = @"{\n\"mentions\" : [ 
         
         // append comma if more objects in list
         if ([[self.emoticons lastObject] isEqual:emoticon] == NO)
-            [emoticonsJson appendString:@","];
+            [emoticonsJson appendString:@", "];
     }
     
     NSString *jsonString = [NSString stringWithFormat:kMessageConstructJSONPlaceholder, personsJson, emoticonsJson, urlsJson];

@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,61 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wN5-fG-wKV">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
+                                <color key="backgroundColor" red="0.95686274509803926" green="0.95686274509803926" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.95686274510000002" green="0.72549019609999998" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="pMn-25-1TY"/>
+                                </connections>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Lmx-3g-thC">
+                                <rect key="frame" x="0.0" y="300" width="600" height="300"/>
+                                <color key="backgroundColor" red="0.29019607843137257" green="0.62352941176470589" blue="0.85490196078431369" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="go"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Lmx-3g-thC" firstAttribute="top" secondItem="wN5-fG-wKV" secondAttribute="bottom" id="3av-zr-cgV"/>
+                            <constraint firstItem="Lmx-3g-thC" firstAttribute="width" secondItem="wN5-fG-wKV" secondAttribute="width" id="75p-ab-fVK"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Lmx-3g-thC" secondAttribute="bottom" id="BXw-0j-RuO"/>
+                            <constraint firstItem="Lmx-3g-thC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="JgM-bP-bSB"/>
+                            <constraint firstItem="wN5-fG-wKV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Ke0-HI-ZBJ"/>
+                            <constraint firstItem="wN5-fG-wKV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Pa7-br-0ad"/>
+                            <constraint firstItem="Lmx-3g-thC" firstAttribute="top" secondItem="wN5-fG-wKV" secondAttribute="bottom" id="T40-ZG-SWN"/>
+                            <constraint firstAttribute="trailing" secondItem="wN5-fG-wKV" secondAttribute="trailing" id="Y2o-i7-MRF"/>
+                            <constraint firstItem="wN5-fG-wKV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bwV-9T-Ttu"/>
+                            <constraint firstItem="Lmx-3g-thC" firstAttribute="height" secondItem="wN5-fG-wKV" secondAttribute="height" id="frv-SW-QtL"/>
+                            <constraint firstAttribute="trailing" secondItem="Lmx-3g-thC" secondAttribute="trailing" id="nVZ-sw-HOG"/>
+                            <constraint firstItem="wN5-fG-wKV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="qjY-uN-aEz"/>
+                            <constraint firstAttribute="trailing" secondItem="wN5-fG-wKV" secondAttribute="trailing" id="vRi-3W-UAv"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Ke0-HI-ZBJ"/>
+                                <exclude reference="Y2o-i7-MRF"/>
+                                <exclude reference="qjY-uN-aEz"/>
+                                <exclude reference="75p-ab-fVK"/>
+                                <exclude reference="T40-ZG-SWN"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="bottomConstraint" destination="BXw-0j-RuO" id="Dbt-TK-Xae"/>
+                        <outlet property="chatTextView" destination="wN5-fG-wKV" id="bSU-1v-YxA"/>
+                        <outlet property="jsonTextView" destination="Lmx-3g-thC" id="N2f-2s-kR9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="373" y="450"/>
         </scene>
     </scenes>
 </document>

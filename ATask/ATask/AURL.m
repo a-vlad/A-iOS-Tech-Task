@@ -17,7 +17,7 @@
 
 @end
 
-static NSString* const kURLJSONPlaceholder = @"{ \"url:\"\"%@\"\n, \"title:\"\"%@\"\n }";
+static NSString* const kURLJSONPlaceholder = @"{\n \"url\" : \"%@\"\n, \"title\" : \"%@\"\n }";
 
 
 @implementation AURL
@@ -26,9 +26,9 @@ static NSString* const kURLJSONPlaceholder = @"{ \"url:\"\"%@\"\n, \"title:\"\"%
 {
     self = [super init];
     if (self && string) {
-        if (string){
+        if (string) {
             _urlPath  = [NSURL URLWithString:string];
-            _urlTitle = [self resolveURLTitle:_urlPath];
+            [self resolveURLTitle];
         }
     }
     return self;
@@ -36,37 +36,53 @@ static NSString* const kURLJSONPlaceholder = @"{ \"url:\"\"%@\"\n, \"title:\"\"%
 
 - (NSString*)jsonString
 {
-    NSString *jsonString = [NSString stringWithFormat:kURLJSONPlaceholder,self.urlPath,self.urlTitle];
+    NSString *jsonString = [NSString stringWithFormat:kURLJSONPlaceholder,
+                            self.urlPath,
+                            self.urlTitle ?: @"resolving..."];
     
     return jsonString;
 }
 
 
 //====================================
-#pragma mark - Private Helpers
+#pragma mark - Public Methods
 //====================================
 
 /**
- *  Resolves URL title for a given URL
- *  @param urlPath
+ *  Resolves URL title for the URL this class was initialized with
  *  @return page title extracted from DOM or empty string if not found
  */
-- (NSString*)resolveURLTitle:(NSURL*)urlPath
+- (void)resolveURLTitle
 {
-    NSData *urlData = [NSData dataWithContentsOfURL:urlPath];
-    
-    TFHpple *parser = [TFHpple hppleWithHTMLData:urlData];
-    NSString *titleXPath = @"/html/head/title";
-    
-    NSArray *matches = [parser searchWithXPathQuery:titleXPath];
-    TFHppleElement *titleElement = [matches firstObject];
-    
-    NSString *title = @"";
-    if (titleElement){
-        title = titleElement.content;
+    // cannot resolve that which does not exist!
+    if (self.urlPath == nil) {
+        [self setValue:nil forKey:@"urlTitle"];
+        return;
     }
-
-    return title;
+    
+    __weak typeof(self) weakSelf = self;
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        
+        NSLog(@"Resolving URL title for: %@", weakSelf.urlPath);
+        
+        NSData *urlData = [NSData dataWithContentsOfURL:weakSelf.urlPath];
+        if (urlData != nil)
+        {
+            TFHpple *parser = [TFHpple hppleWithHTMLData:urlData];
+            NSArray *matches = [parser searchWithXPathQuery:@"/html/head/title"];
+            
+            TFHppleElement *titleElement = [matches firstObject];
+            if (titleElement) {
+                NSLog(@"Resolved URL: %@ to title: %@", weakSelf.urlPath, titleElement.content);
+                [self setValue:titleElement.content forKey:@"urlTitle"];
+            }
+        }
+        else
+        {
+            // no html content for url retrieved, (no internet connection or url is bad)
+            [self setValue:nil forKey:@"urlTitle"];
+        }
+    });
 }
 
 @end
