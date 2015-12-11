@@ -20,7 +20,7 @@
 @end
 
 
-static NSString* const kMessageConstructJSONPlaceholder = @"{\n\"mentions\" : [ \n %@ \n ], \n\"emoticons\" : [ \n %@ \n ], \n\"links\" : [ \n %@ \n ] \n}";
+static NSString* const kMessageConstructJSONPlaceholder = @"{\n\"mentions\" : \n[ \n %@ \n ], \n\"emoticons\" : \n[ \n %@ \n ], \n\"links\" : \n[ \n %@ \n ] \n}";
 
 
 @implementation AMessageConstruct
@@ -61,7 +61,7 @@ static NSString* const kMessageConstructJSONPlaceholder = @"{\n\"mentions\" : [ 
         
         // append comma if more objects in list
         if ([[self.urls lastObject] isEqual:url] == NO)
-            [urlsJson appendString:@", "];
+            [urlsJson appendString:@", \n"];
     }
     
     // create list of emoticons

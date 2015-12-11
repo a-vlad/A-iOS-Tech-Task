@@ -17,7 +17,7 @@
 
 @end
 
-static NSString* const kURLJSONPlaceholder = @"{\n \"url\" : \"%@\"\n, \"title\" : \"%@\"\n }";
+static NSString* const kURLJSONPlaceholder = @"{\n \"url\" : \"%@\"\n, \"title\" : \"%@\"\n}";
 
 
 @implementation AURL
@@ -64,9 +64,10 @@ static NSString* const kURLJSONPlaceholder = @"{\n \"url\" : \"%@\"\n, \"title\"
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         
         NSLog(@"Resolving URL title for: %@", weakSelf.urlPath);
+        NSError *error;
         
-        NSData *urlData = [NSData dataWithContentsOfURL:weakSelf.urlPath];
-        if (urlData != nil)
+        NSData *urlData = [NSData dataWithContentsOfURL:weakSelf.urlPath options:0 error:&error];
+        if (!error)
         {
             TFHpple *parser = [TFHpple hppleWithHTMLData:urlData];
             NSArray *matches = [parser searchWithXPathQuery:@"/html/head/title"];
@@ -74,13 +75,13 @@ static NSString* const kURLJSONPlaceholder = @"{\n \"url\" : \"%@\"\n, \"title\"
             TFHppleElement *titleElement = [matches firstObject];
             if (titleElement) {
                 NSLog(@"Resolved URL: %@ to title: %@", weakSelf.urlPath, titleElement.content);
-                [self setValue:titleElement.content forKey:@"urlTitle"];
+                [weakSelf setValue:titleElement.content forKey:@"urlTitle"];
             }
         }
         else
         {
             // no html content for url retrieved, (no internet connection or url is bad)
-            [self setValue:nil forKey:@"urlTitle"];
+            [weakSelf setValue:error.localizedDescription forKey:@"urlTitle"];
         }
     });
 }
